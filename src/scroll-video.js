@@ -15,6 +15,13 @@ import { initExperienceSequence } from './experience-sequence.js';
 
 gsap.registerPlugin(ScrollTrigger);
 
+if (location.search.includes('benchmark=1')) {
+  globalThis.__resumeAnimationDebug = () => ({
+    scrollTriggers: ScrollTrigger.getAll().length,
+    gsapAnimations: gsap.globalTimeline.getChildren(true, true, true).length,
+  });
+}
+
 const METADATA_TIMEOUT_MS = 8000;
 const FILM_DURATION = heroPacingMap.balanced.timelineDuration ?? 5.6;
 const DEFAULT_TITLE_HOLD_DURATION = 1.15;

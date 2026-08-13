@@ -79,7 +79,7 @@ export const renderContactPhoneLinks = (links = CONTACT_LINKS) => `
 
       return `
         <a ${attributes}>
-          <img src="${escapeAttribute(link.iconSrc)}" alt="" width="512" height="512" decoding="async" />
+          <img src="${escapeAttribute(link.iconSrc)}" alt="" width="512" height="512" loading="lazy" decoding="async" />
         </a>
       `;
     }).join('')}
@@ -130,7 +130,7 @@ export const renderContactCameraApp = (links = CONTACT_LINKS) => `
 
       <button class="contact-phone-camera-icon" type="button" data-open-camera aria-label="開啟相機">
         <span aria-hidden="true">
-          <img src="/assets/icons/contact/iphone-camera-app-icon.png" alt="" width="512" height="512" />
+          <img src="/assets/icons/contact/iphone-camera-app-icon.png" alt="" width="512" height="512" loading="lazy" />
         </span>
       </button>
     </section>
@@ -173,7 +173,7 @@ export const renderContactCameraApp = (links = CONTACT_LINKS) => `
 
     <div class="contact-camera-controls">
       <button class="contact-camera-last" type="button" data-camera-last aria-label="查看最近一次拍攝">
-        <img src="/assets/icons/contact/iphone-camera-app-icon.png" alt="" width="512" height="512" />
+        <img src="/assets/icons/contact/iphone-camera-app-icon.png" alt="" width="512" height="512" loading="lazy" />
       </button>
       <button class="contact-camera-shutter" type="button" data-camera-shutter aria-label="拍照"><span></span></button>
       <button class="contact-camera-flip" type="button" data-camera-flip aria-label="切換前後鏡頭"><span aria-hidden="true">↻</span></button>
