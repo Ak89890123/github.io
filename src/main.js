@@ -16,7 +16,6 @@ const directMotionSection = ['#about', '#skills', '#experience'].includes(locati
 if (directContact || directMotionSection) {
   history.replaceState(null, '', `${location.pathname}${location.search}`);
 }
-const heroSection = resumeSections.find((section) => section.id === 'hero');
 const aboutSection = resumeSections.find((section) => section.id === 'about');
 const contactSection = resumeSections.find((section) => section.id === 'contact');
 const freeSprayColorNames = ['暖膚赭色', '胡桃褐色', '橄欖綠色', '煙霧藍色'];
@@ -42,7 +41,7 @@ const renderSkillsTitle = () => `
   </h2>
 `;
 
-const renderHeroTvSequence = (hero, about) => `
+const renderHeroTvSequence = (about) => `
   <section class="hero-tv-sequence" data-hero-tv-sequence aria-label="Hero 與三螢幕控制室動畫">
     <div class="motion-hero-scroll" data-hero-scroll>
       <div class="motion-stage">
@@ -54,12 +53,7 @@ const renderHeroTvSequence = (hero, about) => `
               <source src="/assets/videos/hero-title-scroll-v2-24fps-delivery.mp4" type="video/mp4" />
             </video>
           </div>
-          <div class="motion-hero-copy">
-            <h1 id="hero-title">Lazydoooog</h1>
-            <p class="motion-role">AI Workflow Automation Engineer</p>
-            <p class="motion-summary">${hero.summary}</p>
-          </div>
-          <div class="motion-hero-proof">${hero.detail}</div>
+          <h1 id="hero-title" class="sr-only">陳鉦宗</h1>
         </section>
 
         <div class="motion-paper-tear" data-paper-tear aria-hidden="true">
@@ -353,7 +347,6 @@ const renderExperienceSection = (section) => `
 `;
 
 app.innerHTML = `
-  <div class="page-progress" aria-hidden="true"><span></span></div>
   <header class="site-header">
     <a class="header-contact" href="mailto:a89890123@gmail.com">Email ↗</a>
     <nav class="site-nav" aria-label="履歷區段">
@@ -361,22 +354,11 @@ app.innerHTML = `
     </nav>
   </header>
   <main>
-    ${renderHeroTvSequence(heroSection, aboutSection)}
+    ${renderHeroTvSequence(aboutSection)}
     ${renderSkillsSection(resumeSections.find((item) => item.id === 'experience'))}
     ${renderContactSection(contactSection)}
   </main>
 `;
-
-const progressFill = document.querySelector('.page-progress span');
-const updatePageProgress = () => {
-  const max = document.documentElement.scrollHeight - window.innerHeight;
-  const progress = max > 0 ? window.scrollY / max : 0;
-  progressFill.style.transform = `scaleX(${Math.min(1, Math.max(0, progress))})`;
-};
-
-window.addEventListener('scroll', updatePageProgress, { passive: true });
-window.addEventListener('resize', updatePageProgress, { passive: true });
-updatePageProgress();
 
 const navLinks = [...document.querySelectorAll('.site-nav a')];
 let motionController = null;

@@ -122,38 +122,6 @@ html {
   mix-blend-mode: soft-light;
 }
 
-.motion-hero-copy {
-  position: absolute;
-  z-index: 7;
-  top: clamp(92px, 13vh, 128px);
-  left: clamp(22px, 5vw, 82px);
-  bottom: auto;
-  width: min(430px, calc(100% - 44px));
-  max-width: 430px;
-  padding: 22px 26px 24px 0;
-  background: linear-gradient(90deg, rgba(7, 9, 10, 0.88), rgba(7, 9, 10, 0.52) 72%, transparent);
-  perspective: 1000px;
-}
-
-.motion-hero-copy::before {
-  content: "";
-  position: absolute;
-  top: -28px;
-  left: 0;
-  width: clamp(48px, 7vw, 108px);
-  height: 2px;
-  background: linear-gradient(90deg, var(--motion-green), rgba(121, 242, 162, 0));
-  box-shadow: 0 0 18px rgba(121, 242, 162, 0.45);
-}
-
-.motion-hero-proof {
-  position: absolute;
-  z-index: 7;
-  top: calc(clamp(92px, 13vh, 128px) + 216px);
-  left: clamp(22px, 5vw, 82px);
-  width: min(430px, calc(100% - 44px));
-}
-
 .motion-eyebrow,
 .motion-corridor-head,
 .motion-screen footer {
@@ -167,16 +135,6 @@ html {
   color: var(--motion-green);
   font-size: 11px;
   font-weight: 700;
-}
-
-.motion-hero h1 {
-  max-width: none;
-  margin: 0;
-  font-family: var(--display);
-  font-size: clamp(42px, 5vw, 72px);
-  font-weight: 700;
-  line-height: 0.94;
-  letter-spacing: -0.03em;
 }
 
 .motion-title-line {
@@ -196,46 +154,6 @@ html {
 
 .motion-title-line:last-child > span {
   padding-left: clamp(24px, 4vw, 64px);
-}
-
-.motion-role {
-  margin: 14px 0 0;
-  color: var(--motion-green);
-  font-size: clamp(17px, 1.7vw, 23px);
-  will-change: transform, opacity;
-}
-
-.motion-summary {
-  max-width: 50ch;
-  margin: 10px 0 0;
-  color: var(--motion-muted);
-  font-size: clamp(14px, 1vw, 16px);
-  line-height: 1.6;
-  will-change: transform, opacity;
-}
-
-.motion-hero-proof .resume-metrics {
-  margin-top: 20px;
-  background: rgba(7, 9, 10, 0.54);
-}
-
-.motion-hero-proof .resume-metrics span {
-  min-height: 66px;
-  padding: 11px 12px;
-  font-size: 10px;
-}
-
-.motion-hero-proof .resume-metrics strong {
-  font-size: clamp(22px, 2vw, 30px);
-}
-
-.motion-hero-proof .action-row {
-  margin-top: 16px;
-}
-
-.motion-hero-proof .button {
-  min-height: 44px;
-  font-size: 12px;
 }
 
 .motion-hero-frame {
@@ -1456,11 +1374,7 @@ html {
   }
 
   .motion-hero {
-    display: grid;
     min-height: 100svh;
-    grid-template-columns: minmax(0, 1fr);
-    grid-template-rows: 100svh auto;
-    padding-bottom: 28px;
   }
 
   .motion-hero-media,
@@ -1476,67 +1390,6 @@ html {
 
   .motion-hero-media img {
     filter: none;
-  }
-
-  .motion-hero-copy {
-    position: relative;
-    grid-area: 1 / 1;
-    align-self: start;
-    left: auto;
-    bottom: auto;
-    width: auto;
-    max-width: none;
-    margin: 0 18px;
-    padding: 72px 0 22px;
-    background: linear-gradient(180deg, rgba(7, 9, 10, 0.88), transparent 35% 64%, rgba(7, 9, 10, 0.9));
-  }
-
-  .motion-hero h1 {
-    font-size: clamp(38px, 12vw, 50px);
-  }
-
-  .motion-role {
-    margin-top: 8px;
-    font-size: 15px;
-  }
-
-  .motion-summary {
-    max-width: 34ch;
-    margin-top: 7px;
-    font-size: 13px;
-    line-height: 1.5;
-  }
-
-  .motion-hero-proof {
-    position: relative;
-    grid-area: 2 / 1;
-    top: auto;
-    left: auto;
-    width: auto;
-    margin: 0 18px 28px;
-  }
-
-  .motion-hero-proof .resume-metrics {
-    margin-top: 0;
-  }
-
-  .motion-hero-proof .resume-metrics span {
-    min-height: 58px;
-    padding: 9px 10px;
-    font-size: 9px;
-  }
-
-  .motion-hero-proof .resume-metrics strong {
-    font-size: 22px;
-  }
-
-  .motion-hero-proof .action-row {
-    margin-top: 12px;
-  }
-
-  .motion-hero-proof .button {
-    min-height: 42px;
-    padding-inline: 16px;
   }
 
   .motion-hero-frame,
