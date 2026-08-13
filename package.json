@@ -1,0 +1,20 @@
+{
+  "name": "gsap-scroll-video-resume",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "open": "vite --host 127.0.0.1 --port 5173 --strictPort --open",
+    "build": "vite build",
+    "preview": "vite preview",
+    "test": "node --test src/scroll-video-math.test.js src/hero-pacing.test.js src/paper-tear-transition.test.js src/about-sequence-math.test.js src/about-sprite-manifest.test.js src/about-workflow-media.test.js src/about-media-receipt.test.js src/about-sequence-contract.test.js src/skills-sequence-math.test.js src/experience-sequence-math.test.js src/contact-phone.test.js src/contact-sequence-math.test.js"
+  },
+  "dependencies": {
+    "gsap": "3.15.0",
+    "three": "^0.185.1"
+  },
+  "devDependencies": {
+    "vite": "8.1.4"
+  }
+}
