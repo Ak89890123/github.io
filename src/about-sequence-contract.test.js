@@ -154,6 +154,7 @@ test('sprite media loads the complete manifest set and preserves deterministic f
   });
   assert.match(aboutSource, /createAboutSpriteFrameState/);
   assert.match(aboutSource, /fetch\(manifestPath/);
+  assert.match(aboutSource, /new URL\(manifest\.sheetPath\.slice\(1\), document\.baseURI\)\.href/);
   assert.match(aboutSource, /image\.decode\(\)/);
   assert.match(aboutSource, /createAboutSpriteRenderState/);
   assert.match(aboutSource, /aboutSpriteAssetState\s*=\s*'ready'/);

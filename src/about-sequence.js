@@ -85,10 +85,14 @@ const createAboutSpriteMediaController = (root, config = {}) => {
         if (!validation.valid) {
           throw new Error(`Invalid sprite manifest: ${manifest.id}`);
         }
+        const runtimeManifest = {
+          ...manifest,
+          sheetPath: new URL(manifest.sheetPath.slice(1), document.baseURI).href,
+        };
         const image = new Image();
-        image.src = manifest.sheetPath;
+        image.src = runtimeManifest.sheetPath;
         if (typeof image.decode === 'function') await image.decode();
-        return manifest;
+        return runtimeManifest;
       }));
       if (destroyed) return;
       loaded.forEach((manifest) => manifests.set(manifest.id, manifest));
