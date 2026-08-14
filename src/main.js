@@ -82,11 +82,11 @@ const renderHeroTvSequence = (about) => `
             <div class="motion-screen-flash" data-about-flash aria-hidden="true"></div>
             <div class="motion-screen-content motion-screen-content--character" data-about-content>
               <div class="motion-character-reel" data-about-character-reel data-reel-state="standby" role="img" aria-label="lazydooog 角色局部特寫循環播放">
-                <img class="motion-character-shot motion-character-shot--face" src="/assets/references/lazydooog-leaning-pose-v1.png" alt="" decoding="async" />
-                <img class="motion-character-shot motion-character-shot--hand" src="/assets/references/lazydooog-leaning-pose-v1.png" alt="" decoding="async" />
-                <img class="motion-character-shot motion-character-shot--tail" src="/assets/references/lazydooog-leaning-pose-v1.png" alt="" decoding="async" />
-                <img class="motion-character-shot motion-character-shot--shoes" src="/assets/references/lazydooog-leaning-pose-v1.png" alt="" decoding="async" />
-                <img class="motion-character-shot motion-character-shot--pose" src="/assets/references/lazydooog-leaning-pose-v1.png" alt="" decoding="async" />
+                <img class="motion-character-shot motion-character-shot--face" src="/assets/references/lazydooog-leaning-pose-v1.png" alt="" loading="lazy" decoding="async" />
+                <img class="motion-character-shot motion-character-shot--hand" src="/assets/references/lazydooog-leaning-pose-v1.png" alt="" loading="lazy" decoding="async" />
+                <img class="motion-character-shot motion-character-shot--tail" src="/assets/references/lazydooog-leaning-pose-v1.png" alt="" loading="lazy" decoding="async" />
+                <img class="motion-character-shot motion-character-shot--shoes" src="/assets/references/lazydooog-leaning-pose-v1.png" alt="" loading="lazy" decoding="async" />
+                <img class="motion-character-shot motion-character-shot--pose" src="/assets/references/lazydooog-leaning-pose-v1.png" alt="" loading="lazy" decoding="async" />
                 <span class="motion-character-brand motion-screen-title">Lazydoooog</span>
               </div>
             </div>
@@ -112,6 +112,7 @@ const renderHeroTvSequence = (about) => `
                   loop
                   playsinline
                   preload="metadata"
+                  data-lazy-video
                   poster="/assets/posters/about-repeat-detected-final.png"
                   aria-label="A repeated desk workflow becoming a reliable automation"
                 >
@@ -121,6 +122,7 @@ const renderHeroTvSequence = (about) => `
                   class="motion-repeat-poster"
                   src="/assets/posters/about-repeat-detected-final.png"
                   alt=""
+                  loading="lazy"
                   decoding="async"
                 />
                 <div class="motion-repeat-copy">
@@ -157,13 +159,13 @@ const renderHeroTvSequence = (about) => `
           </div>
 
           <div class="motion-buttons" role="group" aria-label="快速切換電視狀態">
-            <button class="motion-power" type="button" data-about-plate="1" data-press-frame="0" aria-label="開啟第一台電視"><span class="motion-power-sprite"><img src="/assets/sprites/about/power-button-states.png" alt="" /></span></button>
-            <button class="motion-power" type="button" data-about-plate="2" data-press-frame="0" aria-label="開啟第二台電視"><span class="motion-power-sprite"><img src="/assets/sprites/about/power-button-states.png" alt="" /></span></button>
-            <button class="motion-power" type="button" data-about-plate="3" data-press-frame="0" aria-label="開啟第三台電視"><span class="motion-power-sprite"><img src="/assets/sprites/about/power-button-states.png" alt="" /></span></button>
+            <button class="motion-power" type="button" data-about-plate="1" data-press-frame="0" aria-label="開啟第一台電視"><span class="motion-power-sprite"><img src="/assets/sprites/about/power-button-states.png" alt="" loading="lazy" /></span></button>
+            <button class="motion-power" type="button" data-about-plate="2" data-press-frame="0" aria-label="開啟第二台電視"><span class="motion-power-sprite"><img src="/assets/sprites/about/power-button-states.png" alt="" loading="lazy" /></span></button>
+            <button class="motion-power" type="button" data-about-plate="3" data-press-frame="0" aria-label="開啟第三台電視"><span class="motion-power-sprite"><img src="/assets/sprites/about/power-button-states.png" alt="" loading="lazy" /></span></button>
           </div>
 
-          <div class="motion-third-rail motion-third-rail--back" data-about-rail="back" aria-hidden="true"><img src="/assets/sprites/about/boardslide-rail-v3.png" alt="" /></div>
-          <div class="motion-third-rail motion-third-rail--front" data-about-rail="front" aria-hidden="true"><img src="/assets/sprites/about/boardslide-rail-v3.png" alt="" /></div>
+          <div class="motion-third-rail motion-third-rail--back" data-about-rail="back" aria-hidden="true"><img src="/assets/sprites/about/boardslide-rail-v3.png" alt="" loading="lazy" /></div>
+          <div class="motion-third-rail motion-third-rail--front" data-about-rail="front" aria-hidden="true"><img src="/assets/sprites/about/boardslide-rail-v3.png" alt="" loading="lazy" /></div>
           <div class="motion-hud" aria-hidden="true">
             <span data-about-hud="1">
               <em class="motion-combo-label">OLLIE x1</em>
@@ -211,19 +213,19 @@ const renderContactSection = (section) => {
             <div class="contact-handoff-reveal" data-contact-handoff-reveal aria-hidden="true">
               <div class="contact-skate-scene" data-contact-skate-scene>
                 <div class="contact-cockroach" data-contact-cockroach data-contact-roach-phase="crawl">
-                  <img src="/assets/sprites/contact/contact-cockroach-v1.png" data-contact-roach-pose="crawl" alt="" decoding="async" />
-                  <img src="/assets/sprites/contact/contact-cockroach-flight-v1.png" data-contact-roach-pose="flight" alt="" decoding="async" />
+                  <img src="/assets/sprites/contact/contact-cockroach-v1.png" data-contact-roach-pose="crawl" alt="" loading="lazy" decoding="async" />
+                  <img src="/assets/sprites/contact/contact-cockroach-flight-v1.png" data-contact-roach-pose="flight" alt="" loading="lazy" decoding="async" />
                 </div>
               </div>
             </div>
             <div class="contact-handoff-dog-layer" aria-hidden="true">
               <div class="contact-handoff-dog" data-contact-dog data-contact-pose="push">
-                <img src="/assets/sprites/contact/contact-dog-skate-v2-01-push.png" data-contact-dog-pose="push" alt="" decoding="async" />
-                <img src="/assets/sprites/contact/contact-dog-skate-v2-02-glide.png" data-contact-dog-pose="glide" alt="" decoding="async" />
-                <img src="/assets/sprites/contact/contact-dog-skate-v4-03-airborne.png" data-contact-dog-pose="airborne" alt="" decoding="async" />
-                <img src="/assets/sprites/contact/contact-dog-skate-v7-04-frightened-side-glide-left.png" data-contact-dog-pose="escape" alt="" decoding="async" />
+                <img src="/assets/sprites/contact/contact-dog-skate-v2-01-push.png" data-contact-dog-pose="push" alt="" loading="lazy" decoding="async" />
+                <img src="/assets/sprites/contact/contact-dog-skate-v2-02-glide.png" data-contact-dog-pose="glide" alt="" loading="lazy" decoding="async" />
+                <img src="/assets/sprites/contact/contact-dog-skate-v4-03-airborne.png" data-contact-dog-pose="airborne" alt="" loading="lazy" decoding="async" />
+                <img src="/assets/sprites/contact/contact-dog-skate-v7-04-frightened-side-glide-left.png" data-contact-dog-pose="escape" alt="" loading="lazy" decoding="async" />
               </div>
-              <img class="contact-startle-reaction" src="/assets/sprites/contact/contact-exclamation-v1.png" data-contact-reaction alt="" decoding="async" />
+              <img class="contact-startle-reaction" src="/assets/sprites/contact/contact-exclamation-v1.png" data-contact-reaction alt="" loading="lazy" decoding="async" />
             </div>
             <div class="contact-phone-flight" data-contact-phone-flight>
               <div class="contact-phone-device" data-contact-phone-device>
@@ -276,7 +278,7 @@ const renderSkillsSection = (experienceSection) => {
             >
               <span class="skills-can-slot__mount" aria-hidden="true"></span>
               <span class="skills-can-slot__can" aria-hidden="true">
-                <img src="/assets/sprites/skills/spray-can-v1.png" alt="" decoding="async" />
+                <img src="/assets/sprites/skills/spray-can-v1.png" alt="" loading="lazy" decoding="async" />
               </span>
             </button>
           `).join('')}
@@ -300,12 +302,12 @@ const renderSkillsSection = (experienceSection) => {
 
         <div class="skills-tool" data-skills-tool aria-hidden="true">
           <span class="skills-tool__mist"></span>
-          <img src="/assets/sprites/skills/spray-can-v1.png" alt="" decoding="async" />
+          <img src="/assets/sprites/skills/spray-can-v1.png" alt="" loading="lazy" decoding="async" />
         </div>
 
         <div class="experience-can" data-experience-can aria-hidden="true">
           <span></span>
-          <img src="/assets/sprites/skills/spray-can-v1.png" alt="" decoding="async" />
+          <img src="/assets/sprites/skills/spray-can-v1.png" alt="" loading="lazy" decoding="async" />
         </div>
       </div>
       ${renderExperienceSection(experienceSection)}
@@ -339,8 +341,8 @@ const renderExperienceSection = (section) => `
       </div>
 
       <div class="experience-dog" data-experience-dog aria-hidden="true">
-        <img src="/assets/sprites/experience/experience-dog-glide-v1.png" data-experience-pose="glide" alt="" decoding="async" />
-        <img src="/assets/sprites/experience/experience-dog-turn-v1.png" data-experience-pose="turn" alt="" decoding="async" />
+        <img src="/assets/sprites/experience/experience-dog-glide-v1.png" data-experience-pose="glide" alt="" loading="lazy" decoding="async" />
+        <img src="/assets/sprites/experience/experience-dog-turn-v1.png" data-experience-pose="turn" alt="" loading="lazy" decoding="async" />
       </div>
     </div>
   </section>
@@ -426,6 +428,63 @@ const observer = new IntersectionObserver((entries) => {
 document.querySelectorAll('[data-section]').forEach((section) => observer.observe(section));
 setActiveSection('hero');
 
+const repeatVideo = document.querySelector('[data-lazy-video]');
+const repeatVideoObserver = repeatVideo && 'IntersectionObserver' in window
+  ? new IntersectionObserver(([entry]) => {
+    if (!entry.isIntersecting) {
+      repeatVideo.pause();
+      return;
+    }
+    if (repeatVideo.preload === 'none') {
+      repeatVideo.preload = 'metadata';
+      repeatVideo.load();
+    }
+    repeatVideo.play().catch(() => {});
+  }, { rootMargin: '360px 0px' })
+  : null;
+repeatVideoObserver?.observe(repeatVideo);
+
+const deferredBackgrounds = [
+  {
+    section: document.getElementById('about'),
+    targets: [...document.querySelectorAll('.motion-mobile-stage')],
+    asset: '/assets/references/three-tv-corridor-v2.png',
+  },
+  {
+    section: document.getElementById('skills'),
+    targets: [
+      ...document.querySelectorAll('.skills-wall__texture, .experience-contact-base, .experience-stage'),
+    ],
+    asset: '/assets/textures/skills-industrial-wall-v1.png',
+  },
+  {
+    section: document.getElementById('contact'),
+    targets: [...document.querySelectorAll('.contact-skate-scene')],
+    asset: '/assets/backgrounds/contact-workshop-v1.png',
+  },
+].filter(({ section, targets }) => section && targets.length > 0);
+
+const deferredBackgroundObserver = 'IntersectionObserver' in window
+  ? new IntersectionObserver((entries, backgroundObserver) => {
+    entries.forEach((entry) => {
+      if (!entry.isIntersecting) return;
+      const deferred = deferredBackgrounds.find(({ section }) => section === entry.target);
+      deferred?.targets.forEach((target) => {
+        target.style.setProperty('--deferred-background-image', `url("${deferred.asset}")`);
+      });
+      backgroundObserver.unobserve(entry.target);
+    });
+  }, { rootMargin: '1200px 0px' })
+  : null;
+
+if (deferredBackgroundObserver) {
+  deferredBackgrounds.forEach(({ section }) => deferredBackgroundObserver.observe(section));
+} else {
+  deferredBackgrounds.forEach(({ targets, asset }) => targets.forEach((target) => {
+    target.style.setProperty('--deferred-background-image', `url("${asset}")`);
+  }));
+}
+
 try {
   contactPhoneController = initContactPhoneScene(animationMap);
 } catch (error) {
@@ -481,6 +540,9 @@ initScrollVideo(animationMap)
 window.addEventListener('pagehide', () => {
   disposed = true;
   observer.disconnect();
+  repeatVideoObserver?.disconnect();
+  deferredBackgroundObserver?.disconnect();
+  repeatVideo?.pause();
   motionController?.destroy();
   contactPhoneController?.destroy();
 }, { once: true });

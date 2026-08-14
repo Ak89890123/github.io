@@ -10,6 +10,7 @@
   --pink: #ff3b9d;
   --orange: #ff7a2f;
   --blue: #53a8ff;
+  --contact-workshop-image: url('/assets/backgrounds/contact-workshop-v1.png');
   --display: "Arial Narrow", "Roboto Condensed", "Noto Sans TC", sans-serif;
   --body: Inter, "Noto Sans TC", "Segoe UI", sans-serif;
   --mono: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
@@ -565,7 +566,7 @@ button {
   overflow: hidden;
   background:
     linear-gradient(rgb(63 86 84 / 82%), rgb(101 140 137 / 76%) 22%, rgb(63 86 84 / 82%)),
-    url('/assets/textures/skills-industrial-wall-v1.png') center / cover,
+    var(--deferred-background-image, none) center / cover,
     #658c89;
 }
 
@@ -627,7 +628,7 @@ button {
   overflow: hidden;
   background:
     linear-gradient(180deg, rgb(5 7 8 / 8%), transparent 48%, rgb(5 7 8 / 34%)),
-    url('/assets/backgrounds/contact-workshop-v1.png') center / cover no-repeat,
+    var(--deferred-background-image, none) center / cover no-repeat,
     #050708;
 }
 
@@ -1738,7 +1739,10 @@ button {
   right: -4%;
   left: -4%;
   height: calc(var(--skills-experience-wall-height, 360svh) + 8%);
-  background: url('/assets/textures/skills-industrial-wall-v1.png') center top / 100% auto repeat-y;
+  background-image: var(--deferred-background-image, none);
+  background-position: center top;
+  background-size: 100% auto;
+  background-repeat: repeat-y;
   transform-origin: center;
 }
 
@@ -2667,7 +2671,7 @@ body > .skills-experience-backdrop .experience-paint {
     padding: 112px 18px 90px;
     background:
       linear-gradient(rgba(63, 86, 84, 0.82), rgba(101, 140, 137, 0.76) 22%, rgba(63, 86, 84, 0.82)),
-      url("/assets/textures/skills-industrial-wall-v1.png") center / cover,
+      var(--deferred-background-image, none) center / cover,
       #658c89;
   }
 
@@ -2794,7 +2798,7 @@ body > .skills-experience-backdrop .experience-paint {
     padding: 112px clamp(18px, 4vw, 64px) 90px;
     background:
       linear-gradient(rgba(63, 86, 84, 0.82), rgba(101, 140, 137, 0.76) 22%, rgba(63, 86, 84, 0.82)),
-      url("/assets/textures/skills-industrial-wall-v1.png") center / cover,
+      var(--deferred-background-image, none) center / cover,
       #658c89;
   }
 

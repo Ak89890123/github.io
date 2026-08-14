@@ -1491,7 +1491,7 @@ html {
     overflow: hidden;
     background-image:
       linear-gradient(rgba(7, 9, 10, 0.18), rgba(7, 9, 10, 0.72)),
-      url("/assets/references/three-tv-corridor-v2.png");
+      var(--deferred-background-image, none);
     background-repeat: no-repeat;
     background-size: 300% 100%;
   }
